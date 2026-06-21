@@ -1,6 +1,6 @@
-# ApiForge User Guide
+# Getman User Guide
 
-This guide explains how to use ApiForge as an offline-first API testing client.
+This guide explains how to use Getman as an offline-first API testing client.
 
 ## Workspace Overview
 
@@ -22,7 +22,7 @@ The request builder lets you configure an HTTP request before sending it.
 
 ### Supported Methods
 
-ApiForge supports:
+Getman supports:
 
 - `GET`
 - `POST`
@@ -46,13 +46,13 @@ You can also omit the protocol:
 api.example.com/users
 ```
 
-ApiForge will automatically convert it to:
+Getman will automatically convert it to:
 
 ```text
 https://api.example.com/users
 ```
 
-For local development, ApiForge uses `http://`:
+For local development, Getman uses `http://`:
 
 ```text
 localhost:3000/users
@@ -81,7 +81,7 @@ For:
 https://api.example.com/users
 ```
 
-ApiForge sends:
+Getman sends:
 
 ```text
 https://api.example.com/users?page=1&limit=20
@@ -112,7 +112,7 @@ Supported body types:
 - Form data
 - `x-www-form-urlencoded`
 
-JSON bodies are validated before sending for methods that send a body. If the JSON is invalid, ApiForge shows an error.
+JSON bodies are validated before sending for methods that send a body. If the JSON is invalid, Getman shows an error.
 
 GET and HEAD requests ignore the body, so body validation does not block those requests.
 
@@ -146,7 +146,7 @@ The `Cookies` tab lists cookies returned by the response. If no cookies are retu
 
 Collections help organize reusable requests.
 
-ApiForge currently supports this structure:
+Getman currently supports this structure:
 
 ```text
 Collection
@@ -169,7 +169,7 @@ Saved requests are stored locally.
 
 ## Request History
 
-ApiForge stores the last 100 requests.
+Getman stores the last 100 requests.
 
 Each history entry includes:
 
@@ -203,7 +203,7 @@ BASE_URL = https://api.example.com
 USER_ID = 42
 ```
 
-ApiForge sends:
+Getman sends:
 
 ```text
 https://api.example.com/users/42
@@ -269,7 +269,7 @@ The selected theme is saved locally.
 
 ## Privacy Expectations
 
-ApiForge does not require:
+Getman does not require:
 
 - Account login
 - Cloud storage
