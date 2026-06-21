@@ -1,6 +1,6 @@
-# ApiForge Troubleshooting
+# Getman Troubleshooting
 
-This document covers common problems while running, developing, or packaging ApiForge.
+This document covers common problems while running, developing, or packaging Getman.
 
 ## Network Error
 
@@ -18,11 +18,11 @@ or the request fails even though the URL looks correct.
 
 In a normal browser, requests can be blocked by CORS. Axios reports many of those failures as `Network Error`, which is not very helpful.
 
-### What ApiForge Does
+### What Getman Does
 
-ApiForge has two safer request paths:
+Getman has two safer request paths:
 
-- Browser development mode uses the local Vite proxy at `/__apiforge_proxy__`
+- Browser development mode uses the local Vite proxy at `/__getman_proxy__`
 - Desktop mode uses the Tauri `send_http_request` command with native Rust HTTP
 
 The desktop app is the intended production target and avoids browser CORS restrictions.
@@ -47,7 +47,7 @@ Try a known public API:
 jsonplaceholder.typicode.com/todos/1
 ```
 
-ApiForge should normalize it to:
+Getman should normalize it to:
 
 ```text
 https://jsonplaceholder.typicode.com/todos/1
@@ -55,7 +55,7 @@ https://jsonplaceholder.typicode.com/todos/1
 
 ## URL Does Not Work Without https://
 
-ApiForge normalizes URLs before sending.
+Getman normalizes URLs before sending.
 
 Examples:
 
@@ -251,7 +251,7 @@ localStorage
 under:
 
 ```text
-apiforge.workspace
+getman.workspace
 ```
 
 Clear browser storage if you want to reset the browser preview workspace.
@@ -261,7 +261,7 @@ Clear browser storage if you want to reset the browser preview workspace.
 Open the browser developer console and run:
 
 ```js
-localStorage.removeItem("apiforge.workspace");
+localStorage.removeItem("getman.workspace");
 location.reload();
 ```
 
@@ -285,6 +285,6 @@ Remember that Tauri config expects `1420` unless you update `src-tauri/tauri.con
 
 ## Production Browser Build And CORS
 
-ApiForge is a desktop app. The browser build is useful for development and UI previews.
+Getman is a desktop app. The browser build is useful for development and UI previews.
 
 If you host the browser build as a website, requests will be subject to normal browser CORS rules unless you provide your own backend proxy.
