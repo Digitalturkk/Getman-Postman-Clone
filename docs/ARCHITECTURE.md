@@ -1,6 +1,6 @@
-# ApiForge Architecture
+# Getman Architecture
 
-ApiForge is organized around a small clean architecture: UI components, business logic, HTTP execution, storage, and desktop integration are separated.
+Getman is organized around a small clean architecture: UI components, business logic, HTTP execution, storage, and desktop integration are separated.
 
 ## Goals
 
@@ -145,7 +145,7 @@ High-level process:
 
 ### URL Normalization
 
-ApiForge adds a protocol when the URL does not include one.
+Getman adds a protocol when the URL does not include one.
 
 Rules:
 
@@ -174,7 +174,7 @@ It uses `reqwest` to send the request outside the browser sandbox. This avoids b
 In Vite development mode, browser preview requests go through:
 
 ```text
-/__apiforge_proxy__
+/__getman_proxy__
 ```
 
 The dev proxy is defined in:
@@ -187,7 +187,7 @@ This makes the browser preview usable while developing.
 
 ### Browser Fallback
 
-If neither Tauri nor the dev proxy is available, ApiForge falls back to Axios. In a normal browser production page, Axios is subject to browser CORS rules.
+If neither Tauri nor the dev proxy is available, Getman falls back to Axios. In a normal browser production page, Axios is subject to browser CORS rules.
 
 ## Storage Flow
 
@@ -231,7 +231,7 @@ localStorage
 Key:
 
 ```text
-apiforge.workspace
+getman.workspace
 ```
 
 ## Tauri Layer
