@@ -1,5 +1,6 @@
 # Getman
 
+![User Guide](src-tauri/icons/icon.png)
 Getman is an offline-first desktop API testing tool inspired by Postman and Insomnia. It is built for backend developers, students, QA engineers, and DevOps engineers who want a fast local client without accounts, sync, telemetry, subscriptions, analytics, or a database.
 
 Getman stores everything locally. In the Tauri desktop app, workspace data is saved as a JSON file in the app data directory. In browser development mode, it falls back to `localStorage`.
